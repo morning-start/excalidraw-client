@@ -45,7 +45,7 @@ func main() {
 		Bind: []interface{}{
 			app,
 		},
-		Menu: m,
+		// Menu: m,
 		Mac: &mac.Options{
 			About: &mac.AboutInfo{
 				Title:   "Excalidraw Client",
