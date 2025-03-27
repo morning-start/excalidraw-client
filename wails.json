@@ -6,8 +6,31 @@
   "frontend:build": "bun run build",
   "frontend:dev:watcher": "bun run dev",
   "frontend:dev:serverUrl": "auto",
-  "copyright":"Copyright MorningStart",
+  "copyright": "Copyright MorningStart",
   "author": {
-    "name": "MorningStart"
+      "name": "MorningStart"
+  },
+  "build": {
+      "targets": [
+          "windows/amd64"
+      ],
+      "windows": {
+          "icon": "build/appicon.ico",
+          "nsis": {
+              "enabled": true,
+              "script": "build/installer.nsi"
+          }
+      }
+  },
+  "assetdir": "frontend/dist",
+  "debug": {
+      "openbrowser": true
+  },
+  "package": {
+      "windows": {
+          "publisher": "MorningStart",
+          "productName": "Excalidraw",
+          "version": "1.0.0"
+      }
   }
-}
+}    
